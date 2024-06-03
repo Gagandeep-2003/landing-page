@@ -461,3 +461,68 @@ h3.text-danger {
     background-color: #e43d3d;
     border-radius: 10px;
 }
+/* Responsiveness */
+
+
+@media (max-width: 768px) {
+    .custom-text h1 {
+        font-size: 2.5rem;
+    }
+    .custom-text p {
+        font-size: 1rem;
+    }
+    .custom-image img {
+        width: 80vw;
+        height: 80vh;
+        margin-left: 0;
+    }
+    .custom-container {
+        padding-right: 15px;
+    }
+    .services .row h2 {
+        font-size: 2rem;
+    }
+    .services .slider .slide {
+        min-width: 80%;
+    }
+    .achivements .a-div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .project-list-group .list-group-item {
+        padding: 15px;
+        min-height: 80px;
+    }
+    #projectImage {
+        height: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-section {
+        padding: 1rem 0;
+    }
+    .custom-text h1 {
+        font-size: 2rem;
+    }
+    .custom-image img {
+        width: 70%;
+        height: auto;
+    }
+    .services .row h2 {
+        font-size: 1.5rem;
+    }
+    .achivements .a-div {
+        width: 100%;
+    }
+    .achivement-row {
+        flex-direction: column;
+    }
+    .project-list-group .list-group-item {
+        padding: 10px;
+        min-height: 60px;
+    }
+    #projectImage {
+        height: 300px;
+    }
+}
