@@ -55,80 +55,71 @@ $(document).ready(function() {
 document.addEventListener('DOMContentLoaded', function () {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Page load animations
-    let tl = gsap.timeline();
-
-    tl.from('.custom-text', { 
+    // Animation on page load
+    gsap.from('.custom-text', { 
         duration: 1.5, 
         y: -50, 
         opacity: 0, 
         ease: 'power3.out', 
         delay: 0.5 
-    })
-    .from('.custom-image img', { 
+    });
+
+    gsap.from('.custom-image img', { 
         duration: 1.5, 
         y: 50, 
         opacity: 0, 
         ease: 'power3.out', 
         delay: 0.5 
-    }, '-=1.0'); // Overlap the animations
+    });
 
     // Scroll-triggered animations
-    gsap.timeline({
+    gsap.from('.choose-you-section .col-md-3', {
         scrollTrigger: {
             trigger: '.choose-you-section',
             start: 'top 80%',
             end: 'bottom 60%',
             scrub: 1
-        }
-    })
-    .from('.choose-you-section .col-md-3', {
+        },
         y: 50,
         opacity: 0,
         stagger: 0.3,
         ease: 'power3.out'
     });
 
-
-    gsap.timeline({
+    
+    gsap.from('.feedback-section .feedback-item', {
         scrollTrigger: {
             trigger: '.feedback-section',
             start: 'top 80%',
             end: 'bottom 60%',
             scrub: 1
-        }
-    })
-    .from('.feedback-section .feedback-item', {
+        },
         y: 50,
         opacity: 0,
         ease: 'power3.out'
     });
 
-    gsap.timeline({
+    gsap.from('.new-section .project-row', {
         scrollTrigger: {
             trigger: '.new-section',
             start: 'top 80%',
             end: 'bottom 60%',
             scrub: 1
-        }
-    })
-    .from('.new-section .project-row', {
+        },
         y: 50,
         opacity: 0,
         ease: 'power3.out'
     });
-
-    gsap.timeline({
+    
+    gsap.from('.services .slider-container', {
         scrollTrigger: {
             trigger: '.services',
             start: 'top 80%',
             end: 'bottom 60%',
             scrub: 1
-        }
-    })
-    .from('.services .slider-container', {
+        },
         y: 50,
         opacity: 0,
         ease: 'power3.out'
     });
-
+});
